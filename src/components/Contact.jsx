@@ -26,6 +26,7 @@ export default function Contact({contacts,currentUser,changeChat})
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
     changeChat(contact);
+    
   };
 
 
@@ -43,6 +44,8 @@ return (
                    {
                        contacts.map((contact,index)=>{
                            return(
+                            
+                           <a href="#ChatContainer">
                                <div className={`contact ${index===currentSelected? "selected":""}`} key={index}
                                 onClick={()=>changeCurrentChat(index,contact)}>
 
@@ -56,8 +59,10 @@ return (
                     <div className="username">
                         <h3>{contact.username}</h3>
                     </div>
-                               </div>
+                               </div></a>
+                               
                            )
+                           
                        })
                    }
                </div>

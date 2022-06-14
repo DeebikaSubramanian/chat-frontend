@@ -77,7 +77,7 @@ useEffect(()=>
     { currentChat && 
        ( <Container>
 
-<div className="chat-header">
+<div className="chat-header" id="ChatContainer">
         <div className="user-details">
           <div className="avatar">
             <img
