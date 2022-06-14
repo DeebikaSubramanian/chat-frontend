@@ -4,7 +4,7 @@ import logo from "../images/logo.png"
 
 export default function Contact({contacts,currentUser,changeChat})
 {
-    
+   
     const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
@@ -26,7 +26,7 @@ export default function Contact({contacts,currentUser,changeChat})
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
     changeChat(contact);
-    
+        
   };
 
 
@@ -45,8 +45,7 @@ return (
                        contacts.map((contact,index)=>{
                            return(
                             
-                           <a href="#ChatContainer">
-                               <div className={`contact ${index===currentSelected? "selected":""}`} key={index}
+                                                         <div className={`contact ${index===currentSelected? "selected":""}`} key={index}
                                 onClick={()=>changeCurrentChat(index,contact)}>
 
                                     <div className="avatar">
@@ -59,7 +58,7 @@ return (
                     <div className="username">
                         <h3>{contact.username}</h3>
                     </div>
-                               </div></a>
+                               </div>
                                
                            )
                            
@@ -131,9 +130,7 @@ const Container = styled.div`
           height: 3rem;
         }
       }
-      // @media screen and (max-width: 425px)  {
-      //   flex-direction:column;
-      // }
+     
       
       .username {
         h3 {
@@ -141,6 +138,16 @@ const Container = styled.div`
         }
       }
     }
+
+    // @media screen and   (min-width:320px)  and (max-width: 425px){
+    //   .current-user
+    //   {
+    //     display:none;
+    //     background-color:red;
+    //   }
+     
+    // }
+
     .selected {
       background-color: #E6B0AA;
      }
