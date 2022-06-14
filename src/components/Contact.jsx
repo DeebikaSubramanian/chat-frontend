@@ -126,9 +126,9 @@ const Container = styled.div`
           height: 3rem;
         }
       }
-      @media screen and (max-width: 425px)  {
-        flex-direction:column;
-      }
+      // @media screen and (max-width: 425px)  {
+      //   flex-direction:column;
+      // }
       
       .username {
         h3 {
@@ -138,7 +138,7 @@ const Container = styled.div`
     }
     .selected {
       background-color: #E6B0AA;
-    }
+     }
   }
   .current-user {
     // background-color: #0d0d30;
